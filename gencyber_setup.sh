@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ $(whoami) ne 'root' ]; do
+if [ $(whoami) -ne 'root' ]; do
   echo 'Error: Script must be run as root!'
   exit
 fi
 
 apt-get update
 apt-get remove -y minecraft-pi
-apt-get -y iceweasel vim 
+apt-get -y firefox vim 
 
 # Begin Metasploit
 apt-get -y install build-essential zlib1g zlib1g-dev libxml2 libxml2-dev libxslt-dev locate libreadline6-dev libcurl4-openssl-dev git-core libssl-dev libyaml-dev openssl autoconf libtool ncurses-dev bison curl wget postgresql postgresql-contrib libpq-dev libapr1 libaprutil1 libsvn1 libpcap-dev
