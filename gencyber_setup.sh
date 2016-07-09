@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $(whoami) -ne "root" ]; do
+if [ $(whoami) != "root" ]; then
   echo 'Error: Script must be run as root!'
   exit
 fi
