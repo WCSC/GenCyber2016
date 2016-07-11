@@ -6,11 +6,8 @@ if [ $(whoami) != "root" ]; then
 fi
 
 if [ $LANG != "en_US.UTF-8" ]; then
-  echo "Language is $LANG. Changing to en_US.UTF-8. Please run the script again after reboot." 
-  sed -i 's/\(en_GB\.UTF-8\)/# \1/' /etc/locale.gen 
-  sed -i 's/\(# en_US\.UTF-8\)/en_US.UTF-8/' /etc/locale.gen 
-  sleep 2s
-  shutdown -r
+  echo "Language is $LANG. Please change to en_US.UTF-8" 
+  exit
 fi
 
 mkdir /home/pi/.ssh
